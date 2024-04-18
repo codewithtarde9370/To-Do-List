@@ -18,17 +18,17 @@ function addTask(){
     saveData();
 
 }
-listContainer.addEventListener("click", funtion(e){
-    if(e.target.tagName==="LI"){
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
         saveData();
     }
-    elseif(e.target.tagName==="SPAN"){
+    else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
         saveData();
     }
+}, false);
 
-},false);
 
 function saveData(){
     localStorage.setItem(   "data",listContainer.innerHTML);
